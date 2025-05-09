@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuacChat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+</head>
+<body>
+    <div class="encabezado">
+
+        <div class="title">
+            <h1>CuacBot</h1>
+            <div class="descripcion"><span>Tu organizador de tareas de confianza</span></div>
+        </div>
+
+        <div class="btnTemaModo" id="btnTema">
+            <iconify-icon class="icon-dark" icon="iconamoon:mode-dark-fill" width="24" height="24"></iconify-icon>
+            <iconify-icon class="icon-light" icon="ix:light-dark" width="24" height="24"></iconify-icon>
+        </div>
+
+    </div>
+
+    <div class="chatContenido" id="chatContenido">
+        <!-- Aqui estaran las burbujas de chat incluido las que genere el mismo chatBot -->
+    </div>
+
+    <div class="entradaTexto">
+        <div class="contEntradaTexto">
+            <input autocomplete="off" type="tel" name="introducir" id="inputTexto" placeholder="Comienza a escribir tus tareas pendientes aqui">
+            <iconify-icon id="btnEnviar" icon="iconoir:send-solid" width="18" height="18"></iconify-icon>
+        </div>
+    </div>
+
+    <script src="js/funciones.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

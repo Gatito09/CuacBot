@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-encabezado: #ffffff;
+    --sombra-encabezado: #bbbbbb;
+
+    --color-descripcion: #747474;
+
+    --background: #FFFFFF;
+    --color-text: #414141;
+
+    --bg-boton: #dfdfdf;
+    --bg-boton-hover: #cccccc;
+    --color-boton: #919191;
+    --color-boton-hover: #a5a5a5;
+
+    --bg-entradaTexto: #83838334;
+    --color-entradaTexto: #000;
+
+    --cursor-emtradaTexto: #000000;
+
+    --color-placeholder: #646464;
+
+    --bg-btn-enviar: #1a1a1a;
+    --color-btn-enviar: #ffffff;
+
+    --bg-btn-enviar-hover: #424242;
+
+    --bg-scrollbar: #cfcfcf;
+    --bg-scrollbar-thumb: #929292;
+    --bg-scrollbar-thumb-hover: #b6b6b6;
+}
+
+.modo-oscuro {
+    --bg-encabezado: #252525;
+    --sombra-encabezado: #292929;
+
+    --color-descripcion: #adadad;
+
+    --background: #333333;
+    --color-text: #ffffff;
+
+    --bg-boton: #474747;
+    --bg-boton-hover: #585858;
+    --color-boton: #cfcfcf;
+    --color-boton-hover: #ffffff;
+
+    --bg-entradaTexto: #79797956;
+    --color-entradaTexto: #ffffff;
+
+    --cursor-emtradaTexto: #ffffff;
+
+    --color-placeholder: #adadad;
+
+    --bg-btn-enviar: #ffffff;
+    --color-btn-enviar: #222222;
+
+    --bg-btn-enviar-hover: #c5c5c5;
+
+    --bg-scrollbar: #424242;
+    --bg-scrollbar-thumb: #575757;
+    --bg-scrollbar-thumb-hover: #686868;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+*::placeholder {
+    color: var(--color-placeholder);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    color: var(--color-text);
+    align-items: center;
+    user-select: none;
+
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    background: var(--bg-encabezado);
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    box-shadow: 2px 2px 10px 1px var(--sombra-encabezado);
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.encabezado .title {
+    max-width: 250px;
+    width: 60%;
+    min-width: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    justify-items: center;
+}
+
+.encabezado .title h1 {
+    font-size: 24px;
+}
+
+.encabezado .title .descripcion {
+    width: 100%;
+    white-space: nowrap;
+    color: var(--color-descripcion);
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.encabezado .btnTemaModo {
+    position: fixed;
+    right: 8px;
+    width: 42px;
+    height: 42px;
+    background: var(--bg-boton);
+    color: var(--color-boton);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.encabezado .btnTemaModo iconify-icon {
+    position: absolute;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.encabezado .btnTemaModo .icon-dark {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body.modo-oscuro .encabezado .btnTemaModo .icon-dark {
+    opacity: 0;
+    transform: scale(0.8) rotate(-90deg);
+}
+
+body.modo-oscuro .encabezado .btnTemaModo .icon-light {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Contenido de la pagina */
+.chatContenido {
+    margin-top: 56px;
+    display: flex;
+    width: 65%;
+    height: 100%;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    padding-right: 4px;
+    
+    transition: background 0.5s ease;
+    z-index: 0;
+}
+
+.chatContenido::-webkit-scrollbar {
+    background: var(--bg-scrollbar);
+    width: 5px;
+    position: fixed;
+}
+.chatContenido::-webkit-scrollbar-thumb {
+    background: var(--bg-scrollbar-thumb);
+}
+.chatContenido::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-scrollbar-thumb-hover);
+}
+
+.chatContenido .burbujaMe {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 2px;
+}
+.chatContenido .burbujaMe p {
+    color: #FFFFFF;
+    padding: 6px 12px;
+    background: #000000;
+    border-radius: 15px 15px 0 15px;
+    user-select: text;
+}
+
+.chatContenido .burbujaBot {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-top: 2px;
+}
+.chatContenido .burbujaBot p {
+    color: #000000;
+    padding: 6px 12px;
+    background: #ffffff;
+    border-radius: 0 15px 15px 15px;
+    user-select: text;
+}
+
+/* Entrada de texto */
+.entradaTexto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entradaTexto .contEntradaTexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 45px;
+    min-width: 300px;
+    border-radius: 50px;
+    background: var(--bg-entradaTexto);
+}
+
+.entradaTexto .contEntradaTexto input {
+    background: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding-inline: 16px;
+    border-radius: 50px 0 0 50px;
+    color: var(--color-entradaTexto);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.entradaTexto .contEntradaTexto iconify-icon {
+    padding: 8px;
+    border-radius: 80px;
+    display: flex;
+    background: var(--bg-btn-enviar);
+    color: var(--color-btn-enviar);
+    position: relative;
+    right: 6px;
+    cursor: pointer;
+
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.entradaTexto .contEntradaTexto iconify-icon:hover {
+    background: var(--bg-btn-enviar-hover);
+}
