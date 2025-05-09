@@ -30,11 +30,11 @@
     --bg-scrollbar-thumb: #929292;
     --bg-scrollbar-thumb-hover: #b6b6b6;
 
-    --burbuja-user: #424242;
+    --burbuja-user: #000000;
     --burbuja-color-user: #ffffff;
     
-    --burbuja-bot: #868686;
-    --burbuja-color-bot: #ffffff;
+    --burbuja-bot: #e0e0e0;
+    --burbuja-color-bot: #000000;
 }
 
 .modo-oscuro {
@@ -67,10 +67,10 @@
     --bg-scrollbar-thumb: #575757;
     --bg-scrollbar-thumb-hover: #686868;
 
-    --burbuja-user: #868686;
-    --burbuja-color-user: #ffffff;
+    --burbuja-user: #ffffff;
+    --burbuja-color-user: #000000;
     
-    --burbuja-bot: #424242;
+    --burbuja-bot: #4e4e4e;
     --burbuja-color-bot: #ffffff;
 }
 
@@ -218,6 +218,7 @@ body.modo-oscuro .encabezado .btnTemaModo .icon-light {
     background: var(--burbuja-user);
     border-radius: 15px 15px 0 15px;
     user-select: text;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
 .chatContenido .burbujaBot {
@@ -232,6 +233,7 @@ body.modo-oscuro .encabezado .btnTemaModo .icon-light {
     background: var(--burbuja-bot);
     border-radius: 0 15px 15px 15px;
     user-select: text;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
 /* Entrada de texto */
