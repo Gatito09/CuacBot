@@ -30,10 +30,11 @@
     --bg-scrollbar-thumb: #929292;
     --bg-scrollbar-thumb-hover: #b6b6b6;
 
-    --burbuja-user: #2c2c2c;
-    --burbuja-bot: #868686;
+    --burbuja-user: #424242;
     --burbuja-color-user: #ffffff;
-    --burbuja-color-bot: #000000;
+    
+    --burbuja-bot: #868686;
+    --burbuja-color-bot: #ffffff;
 }
 
 .modo-oscuro {
@@ -67,8 +68,9 @@
     --bg-scrollbar-thumb-hover: #686868;
 
     --burbuja-user: #868686;
-    --burbuja-bot: #2c2c2c;
-    --burbuja-color-user: #000000;
+    --burbuja-color-user: #ffffff;
+    
+    --burbuja-bot: #424242;
     --burbuja-color-bot: #ffffff;
 }
 
