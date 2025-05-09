@@ -29,6 +29,9 @@
     --bg-scrollbar: #cfcfcf;
     --bg-scrollbar-thumb: #929292;
     --bg-scrollbar-thumb-hover: #b6b6b6;
+
+    --burbuja-user: #2c2c2c;
+    --burbuja-bot: #868686;
 }
 
 .modo-oscuro {
@@ -60,6 +63,9 @@
     --bg-scrollbar: #424242;
     --bg-scrollbar-thumb: #575757;
     --bg-scrollbar-thumb-hover: #686868;
+
+    --burbuja-user: #868686;
+    --burbuja-bot: #2c2c2c;
 }
 
 * {
